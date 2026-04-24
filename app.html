@@ -90,7 +90,28 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="instructionScreen">
+  <h1>How to Use This App</h1>
+
+  <p>
+    This is a simple flashcard app. You can:
+  </p>
+
+  <ul style="text-align:left;">
+    <li>Enter a term and definition to create flashcards</li>
+    <li>Click "Flip" to see the definition</li>
+    <li>Click "Next" to move to the next card</li>
+    <li>Use the search bar to find matching cards</li>
+  </ul>
+
+  <p>
+    This app uses a list (array) to store flashcards and lets you interact with them.
+  </p>
+
+  <button onclick="startApp()">Start App</button>
+</div>
+
+  <div class="container" id="appScreen" style="display:none;">
     <h1>Flashcards</h1>
     <a href="https://github.com/Nishanth-S-S/ap_create_task" class="button">Github Page</a>
 
@@ -115,6 +136,7 @@
   </div>
 
   <script>
+    
     // List of flashcards
     let flashcards = [];
     let currentIndex = 0;
@@ -191,6 +213,11 @@
 
     // Show starting message
     showCard();
+    function startApp() {
+  document.getElementById("instructionScreen").style.display = "none";
+  document.getElementById("appScreen").style.display = "block";
+}
+
   </script>
 </body>
 </html>
